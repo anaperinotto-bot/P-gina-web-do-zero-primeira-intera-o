@@ -1,6 +1,7 @@
 const botoes = document.querySelectorALL("button");
 
 botoes.forEach(function (botao) {
+    let curtiu = false;
  botao.addEventListener("click", botaoClicado);
  function botaoClicado() {
      console.log("fui clicado");
@@ -9,7 +10,8 @@ botoes.forEach(function (botao) {
          texto.textContent++;
          curtiu = true;
      } else{
-         
+        texto.textContent--;
+         curtiu = false;
      }
  }
 }
